@@ -1,0 +1,17 @@
+{
+  "name": "augustera.me",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "next",
+    "sass": "^1.35.1",
+    "svelte": "^3.34.0",
+    "svelte-preprocess": "^4.7.3",
+    "typescript": "^4.3.4"
+  },
+  "type": "module"
+}

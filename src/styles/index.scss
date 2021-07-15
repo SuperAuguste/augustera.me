@@ -1,0 +1,34 @@
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+html {
+    font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: "Inter var", sans-serif;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: black;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 4em;
+    font-family: "Bebas Neue";
+}
+
+p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    font-size: 1em;
+    line-height: 1.5;
+}
