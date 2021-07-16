@@ -3,15 +3,15 @@
 </script>
 
 <nav>
-    <div class="control" on:click={() => {closed = !closed}}>
+    <div class="control">
         <div>
-            <span style="display: inline-block; transform: rotate(90deg);">{closed ? "Ⅲ" : "✗"}</span>
+            <span style="display: inline-block; transform: rotate(90deg);" on:click={() => {closed = !closed}}>{closed ? "Ⅲ" : "✗"}</span>
         </div>
         <div>
             <img src="/brand.svg" alt="" />
         </div>
         <div>
-            <span>©</span>
+            <a href="https://github.com/SuperAuguste/augustera.me/blob/dev/LICENSE.md" title="Copyright (c) 2021 Auguste Rame; click for full license">©</a>
         </div>
     </div>
 
@@ -26,8 +26,8 @@
                 />
             </video>
         </a>
-        <a href="/about">
-            <span>About</span>
+        <a href="/blog">
+            <span>Blog</span>
 
             <video autoplay muted loop id="myVideo">
                 <source
@@ -36,22 +36,22 @@
                 />
             </video>
         </a>
-        <a href="/projects">
-            <span>Projects</span>
-
-            <video autoplay muted loop id="myVideo">
-                <source
-                    src="https://storage.coverr.co/videos/MrjWIRTN9wx83lRLvd6OIqZypPWyYDu3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjI2MzYxMDA4fQ.VA00ksYsOr_7vAVFGGcQtn-W_uAxDuCgLejZnnDNTEI"
-                    type="video/mp4"
-                />
-            </video>
-        </a>
-        <a href="/resume.pdf">
-            <span>CV</span>
+        <a href="/about">
+            <span>About</span>
 
             <video autoplay muted loop id="myVideo">
                 <source
                     src="https://storage.coverr.co/videos/OabtBRow1hUanYIrwpQNvpC3bb6UROSr?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjI2MzU5MTYxfQ.wnedt7tJJxN8tHdcEnozzDwTLYXk5tksJ6379cxEVnM"
+                    type="video/mp4"
+                />
+            </video>
+        </a>
+        <a href="/portfolio">
+            <span>Portfolio</span>
+
+            <video autoplay muted loop id="myVideo">
+                <source
+                    src="https://storage.coverr.co/videos/MrjWIRTN9wx83lRLvd6OIqZypPWyYDu3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjI2MzYxMDA4fQ.VA00ksYsOr_7vAVFGGcQtn-W_uAxDuCgLejZnnDNTEI"
                     type="video/mp4"
                 />
             </video>
@@ -100,10 +100,16 @@
             box-sizing: border-box;
             background-color: white;
 
-            span {
+            span, a {
+                color: black;
                 font-size: 2rem;
+
                 cursor: pointer;
                 user-select: none;
+            }
+
+            a {
+                text-decoration: underline;
             }
 
             img {

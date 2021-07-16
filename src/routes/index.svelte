@@ -22,28 +22,10 @@
     </div>
 
     <div>
-        <img src="https://cdn.thisiswhyimbroke.com/images/hats-for-cats1.jpg" alt="">
-        <img src="https://i.etsystatic.com/18460845/r/il/190c61/1711298976/il_570xN.1711298976_67rk.jpg" alt="">
+        <img src="/soldering.jpg" alt="">
     </div>
 </div>
 
 <style lang="scss">
-    .bisect {
-        display: flex;
-
-        &>* {
-            width: 50%;
-
-            text-align: justify;
-        }
-    }
-
-    img {
-        display: block;
-
-        margin-left: auto;
-        margin-bottom: 4rem;
-
-        width: calc(100% - 4rem);
-    }
+    
 </style>
