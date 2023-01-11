@@ -9,22 +9,22 @@ import { createServer } from "http";
 
 async function compile(template, data, dest) {
     const result = await ejs.renderFile(path.join("templates", template), data, {});
-    await fs.writeFile(path.join("public", dest), result);
+    await fs.writeFile(path.join("docs", dest), result);
 }
 
 async function generate() {
-    try {await fs.mkdir("public");} catch {}
-    try {await fs.mkdir("public/resume");} catch {}
+    try {await fs.mkdir("docs");} catch {}
+    try {await fs.mkdir("docs/resume");} catch {}
     
     await compile("index.ejs", {}, "index.html");
     await compile("resume.ejs", {}, "resume/index.html");
-    await fs.writeFile("public/style.css", sass.compile("style/style.scss", { style: "compressed" }).css);
+    await fs.writeFile("docs/style.css", sass.compile("style/style.scss", { style: "compressed" }).css);
 }
 
 watch(["style", "templates"]).on("all", generate);
 generate();
 
-var serve = serveStatic("public");
+var serve = serveStatic("docs");
 
 var server = createServer(function(req, res) {
     var done = finalhandler(req, res);
