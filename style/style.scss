@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500..700&family=Inter:wght@400..700&display=swap");
+
+:root {
+    font-family: "Sofia Sans";
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    padding: 20px 40px;
+
+    &__brand {
+        margin: 0;
+
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: -1.5px;
+    }
+}
+
+.main {
+    padding: 20px 40px;
+    padding-top: 0;
+
+    &__intro_hero {
+        &>img {
+            width: 200px;
+            border-radius: 7px;
+        }
+    }
+}
+
+.main--resume {
+    &__split_hero {
+        display: flex;
+        gap: 40px;
+
+        &>* {
+            flex: 1;
+            
+            &>h3 {
+                margin-bottom: 10px;
+            }
+
+            &>p {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    &__experience {
+        &>h3 {
+            margin-bottom: 15px;
+        }
+
+        &__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            &>li {
+                break-inside: avoid;                
+
+                margin-bottom: 10px;
+                
+                &>header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    margin-bottom: 7.5px;
+
+                    &>h4 {
+                        margin: 0;
+                    }
+
+                    &>div {
+                        display: flex;
+                        flex: 1;
+                        justify-content: space-around;
+
+                        &>div {
+                            border-radius: 100px;
+
+                            width: calc(100% - 40px);
+                            height: 3px;
+
+                            background-color: rgb(206, 206, 206);
+                        }
+                    }
+
+                    &>time {
+                        font-size: 20px;
+                        font-family: "Sofia Sans";
+                        font-weight: 500;
+                    }
+                }
+
+                &>ul>li {
+                    line-height: 1.35;
+
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+p, li {
+    font-size: 16px;
+    font-family: "Inter";
+    letter-spacing: -0.011em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Sofia Sans";
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+a {
+    color: hsl(240, 50%, 50%);
+}
