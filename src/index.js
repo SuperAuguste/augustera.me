@@ -7,21 +7,40 @@ import { default as finalhandler } from "finalhandler";
 import { default as serveStatic } from "serve-static";
 import { createServer } from "http";
 
+// TODO: Localize
+
+async function content(p, locale) {
+    const data = (await fs.readFile(path.join("content", locale, p))).toString();
+    if (p.endsWith(".json")) return JSON.parse(data);
+    return data;
+}
+
 async function compile(template, data, dest) {
-    const result = await ejs.renderFile(path.join("templates", template), data, {});
-    await fs.writeFile(path.join("docs", dest), result);
+    for (const locale of ["en", /*"fr"*/]) {
+        const result = await ejs.renderFile(path.join("templates", template), {
+            locale,
+            content,
+            ...data
+        }, {
+            async: true,
+        });
+        await fs.writeFile(path.join("docs", locale === "en" ? "" : locale, dest), result);
+    }
 }
 
 async function generate() {
     try {await fs.mkdir("docs");} catch {}
     try {await fs.mkdir("docs/resume");} catch {}
+
+    // try {await fs.mkdir("docs/fr");} catch {}
+    // try {await fs.mkdir("docs/fr/resume");} catch {}
     
     await compile("index.ejs", {}, "index.html");
     await compile("resume.ejs", {}, "resume/index.html");
     await fs.writeFile("docs/style.css", sass.compile("style/style.scss", { style: "compressed" }).css);
 }
 
-watch(["style", "templates"]).on("all", generate);
+watch(["style", "templates", "content"]).on("all", generate);
 generate();
 
 var serve = serveStatic("docs");

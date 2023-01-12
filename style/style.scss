@@ -1,4 +1,9 @@
+@use "theme";
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500..700&family=Inter:wght@400..700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
 
 :root {
     font-family: "Sofia Sans";
@@ -7,6 +12,9 @@
 html, body {
     margin: 0;
     padding: 0;
+
+    color: var(--foreground);
+    background-color: var(--background);
 }
 
 .nav {
@@ -19,6 +27,11 @@ html, body {
         font-weight: 600;
         line-height: 1;
         letter-spacing: -1.5px;
+
+        &>* {
+            color: var(--foreground);
+            text-decoration: none;
+        }
     }
 }
 
@@ -89,11 +102,12 @@ html, body {
                             width: calc(100% - 40px);
                             height: 3px;
 
-                            background-color: rgb(206, 206, 206);
+                            background-color: var(--foreground-sub-2);
                         }
                     }
 
                     &>time {
+                        color: var(--foreground-sub);
                         font-size: 20px;
                         font-family: "Sofia Sans";
                         font-weight: 500;
@@ -135,5 +149,42 @@ h4 {
 }
 
 a {
-    color: hsl(240, 50%, 50%);
+    color: var(--highlight);
+    // color: hsl(240, 50%, 50%);
+}
+
+#theme_switcher {
+    position: fixed;
+
+    border: 1px solid var(--foreground);
+    border-radius: 3px;
+
+    padding: 10px 20px;
+
+    bottom: 10px;
+    right: 10px;
+
+    background-color: var(--background);
+
+    &>label {
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main--resume {
+        &__split_hero {
+            display: block;
+        }
+
+        &__education, &__experience {
+            &__list>li>header {
+                display: block;
+                &>div {display: none;}
+                &>time {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }

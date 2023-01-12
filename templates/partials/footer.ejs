@@ -1,4 +1,45 @@
+<div id="theme_switcher">
+    <label>Theme</label>
+    <select id="theme_switcher__select">
+        <option value="default">Browser Default</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</div>
 
+<script>
+    function updateTheme() {
+        document.documentElement.className = "";
+
+        const themeOverride = localStorage.getItem("themeOverride");
+        if (themeOverride) {
+            document.documentElement.className = `theme_override_${themeOverride}`;
+            document.getElementById("theme_switcher__select").selectedIndex = themeOverride === "dark" ? 2 : 1;
+        }
+    }
+
+    document.getElementById("theme_switcher__select").addEventListener("change", event => {
+        switch (document.getElementById("theme_switcher__select").selectedIndex) {
+            case 0:
+                localStorage.removeItem("themeOverride");
+                break;
+
+            case 1:
+                localStorage.setItem("themeOverride", "light");
+                break;
+
+            case 2:
+                localStorage.setItem("themeOverride", "dark");
+                break;
+        
+            default:
+                break;
+        }
+        updateTheme();
+    });
+
+    updateTheme();
+</script>
 
 </body>
 </html>

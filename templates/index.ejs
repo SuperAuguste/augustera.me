@@ -1,4 +1,4 @@
-<%- include("partials/header.ejs") %>
+<%- await include("partials/header.ejs", { title: "Home" }) %>
 
 <main class="main">
     <div class="main__intro_hero">
@@ -6,4 +6,4 @@
     </div>
 </main>
 
-<%- include("partials/footer.ejs") %>
+<%- await include("partials/footer.ejs") %>
