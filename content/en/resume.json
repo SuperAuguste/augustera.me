@@ -2,20 +2,20 @@
     "blurbs": {
         "about": {
             "title": "About Me",
-            "text": "I'm a French-and-English-speaking globe-trotting programmer with over 8 years of programming experience. I love taking on novel challenges in unique and technically fulfilling ways. I'm currently based in Montréal, Québec, Canada."
+            "text": "I'm a French-and-English-speaking globe-trotting programmer with over 8 years of programming experience. I love taking on problems in weird but effective ways. I'm currently based in Montréal."
         },
         "skills": {
             "title": "Skills",
-            "text": "Fluent in Java, HTML/CSS, JavaScript (frontend and Node), Python, and <a href=\"https://ziglang.org\">Zig</a>. Knowledgeable in C#, Golang, and PowerShell."
+            "text": "Fluent in Java, HTML/CSS, JavaScript (frontend and Node), Python, and <a href=\"https://ziglang.org\">Zig</a>. Knowledgeable in C#, Go, and PowerShell. Experienced with Svelte, Express, and SASS (and a bunch more - reach out!)"
         },
         "experience": "Experience"
     },
     "experience": [
         {
-            "title": "Creating, Expanding, Maintaining <a href=\"https://github.com/zigtools\">Zig Language Server</a>",
+            "title": "Creating, Expanding, Maintaining <a href=\"https://github.com/zigtools/zls\">Zig Language Server</a>",
             "time": "Apr. 2020 - ",
             "points": [
-                "Creating intellisense tooling that helps thousands of Zig developers ameliorate their workflows.",
+                "Creating intellisense tooling that accelerates thousands of Zig developers.",
                 "Working hand-in-hand with team of contributors and other maintainers.",
                 "Developing comprehensive fuzzing solution to ensure seamless user experience."
             ]
@@ -24,7 +24,7 @@
             "title": "Designing, Developing <a href=\"https://softwareyoucanlove.ca/\">Zig Conference Website</a>",
             "time": "Dec. 2022 - ",
             "points": [
-                "Working with Vancouver stakeholders to produce high-quality designs remotely from Montréal.",
+                "Working with Vancouver stakeholders to designs and develop remotely from Montréal.",
                 "Adapting designs to an existing Go-based internal solution.",
                 "Ensuring full functionality and accessibility."
             ]
@@ -35,23 +35,32 @@
             "points": [
                 "Adapted Zig Language Server code to statically index Zig code.",
                 "Tested solution on Sourcegraph servers.",
-                "Worked with stakeholders to ensure timely delivery, even as a full-time student in Montréal."
+                "Worked with stakeholders to ensure timely delivery, even as a full-time student."
             ]
         },
         {
             "title": "Directed <a href=\"https://snitchbcc.com/\">The Snitch</a> Satirical News Website",
             "time": "Oct. 2019 - Jun. 2022",
             "points": [
-                "Wrote, edited, and webmastered for a school satirical journal that I co-founded in Bethesda, Maryland.",
+                "Wrote, edited, and webmastered a school satirical journal that I co-founded in Maryland.",
                 "Worked with large writing and editing team to keep output continuous and high-quality.",
                 "Designed the website and implemented it with a Node backend."
+            ]
+        },
+        {
+            "title": "Rewrote <a href=\"https://www.bibliosansfrontieres.org/\">Bibliothèques Sans Frontières</a>' Ideas Box Frontend",
+            "time": "Jun. 2021 - Jul. 2021",
+            "points": [
+                "Proposed and began reimplementing Quasar frontend in Svelte.",
+                "Collaborated with team members to ensure proper functionality carry-over.",
+                "Helped ensure continuation of work I had begun by training teammates."
             ]
         },
         {
             "title": "Taught at Non-Profit <a href=\"https://coderdojodc.com/\">CoderDojo DC</a>",
             "time": "2019 - 2020",
             "points": [
-                "Taught 6 - 17 year olds Scratch, Python, and HTML / CSS / JavaScript in Rockville, Maryland.",
+                "Taught 6 - 17 year olds Scratch, Python, and HTML / CSS / JavaScript in Maryland.",
                 "Helped people with no access to computers at home acquire computer literacy skills.",
                 "Configured Rockville Memorial Library Science Center space to optimize teaching."
             ]
@@ -60,7 +69,7 @@
             "title": "Taught at <a href=\"https://geekexpress.com/\">GeekExpress</a>",
             "time": "2017 - 2019",
             "points": [
-                "Taught 5 - 14 year olds twice a week in Beirut throughout the year and full-time in July 2018.",
+                "Taught 5 - 14 year olds in Beirut twice a week and full-time in July 2018.",
                 "Developed curriculums around app, web, and XR development.",
                 "Helped expand company to local schools."
             ]
@@ -69,7 +78,7 @@
             "title": "Implemented Cryptography Backend at CryptoPHI",
             "time": "2018 - 2019",
             "points": [
-                "Worked in Beirut once a week throughout the year, full-time in June 2018 on backend code and infrastructure.",
+                "Worked in Beirut once a week and full-time in June 2018 on backend code.",
                 "Collaborated with cryptography PhD on secure storage implementation.",
                 "Translated PHP components of the old backend into Node."
             ]
@@ -79,7 +88,7 @@
             "time": "Apr. 2018",
             "points": [
                 "Created a circuit prototype with minimal guidance in Beirut.",
-                "Transformed the prototype into a PCB using EAGLE, a CNC machine, and a healthy dose of soldering.",
+                "Manufactured PCB using EAGLE, a CNC machine, and a healthy dose of soldering.",
                 "Thoroughly tested PCB to ensure full functionality was delivered."
             ]
         }
