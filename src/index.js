@@ -6,6 +6,7 @@ import { default as sass } from "sass";
 import { default as finalhandler } from "finalhandler";
 import { default as serveStatic } from "serve-static";
 import { createServer } from "http";
+import { argv } from "process";
 
 // TODO: Localize
 
@@ -24,35 +25,40 @@ async function compile(template, data, dest) {
         }, {
             async: true,
         });
-        await fs.writeFile(path.join("docs", locale === "en" ? "" : locale, dest), result);
+        await fs.writeFile(path.join("public", locale === "en" ? "" : locale, dest), result);
     }
 }
 
 async function generate() {
-    try {await fs.mkdir("docs");} catch {}
-    try {await fs.mkdir("docs/resume");} catch {}
+    try {await fs.mkdir("public");} catch {}
+    try {await fs.mkdir("public/resume");} catch {}
 
-    // try {await fs.mkdir("docs/fr");} catch {}
-    // try {await fs.mkdir("docs/fr/resume");} catch {}
+    // try {await fs.mkdir("public/fr");} catch {}
+    // try {await fs.mkdir("public/fr/resume");} catch {}
     
     await compile("index.ejs", {}, "index.html");
     await compile("resume.ejs", {}, "resume/index.html");
-    await fs.writeFile("docs/style.css", sass.compile("style/style.scss", { style: "compressed" }).css);
+    await fs.writeFile("public/style.css", sass.compile("style/style.scss", { style: "compressed" }).css);
 }
 
-watch(["style", "templates", "content"]).on("all", generate);
 generate();
 
-var serve = serveStatic("docs");
+if (argv.length === 3 && argv[2] === "live") {
+    console.log("Watching for changes...");
 
-var server = createServer(function(req, res) {
-    var done = finalhandler(req, res);
-    serve(req, res, done);
-});
+    watch(["style", "templates", "content"]).on("all", generate);
 
-process.on("uncaughtException", err => {
-    console.error(err);
-});
+    var serve = serveStatic("public");
 
-server.listen(5500);
+    var server = createServer(function(req, res) {
+        var done = finalhandler(req, res);
+        serve(req, res, done);
+    });
+
+    process.on("uncaughtException", err => {
+        console.error(err);
+    });
+
+    server.listen(5500);
+}
 

@@ -6,9 +6,6 @@
     "sass": "^1.57.1",
     "serve-static": "^1.15.0"
   },
-  "scripts": {
-    "scss": "sass --watch style/style.scss:public/css/style.css --style compressed --no-source-map"
-  },
   "main": "src/index.js",
   "type": "module"
 }
