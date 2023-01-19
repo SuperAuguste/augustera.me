@@ -3,6 +3,12 @@
 <% const resume = await content("resume.json", locale); %>
 
 <main class="main main--resume">
+    <div class="main--resume__contact">
+        <a href="https://github.com/SuperAuguste">SuperAuguste on GitHub</a> <span>&bull;</span>
+        <a href="https://www.linkedin.com/in/auguste-rame">Auguste Rame on LinkedIn</a> <span>&bull;</span>
+        <a href="https://discord.gg/zig">aurame @ discord.gg/zig</a>
+    </div>
+
     <div class="main--resume__split_hero">
         <div>
             <h3><%- resume.blurbs.about.title %></h3>

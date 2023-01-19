@@ -1,5 +1,6 @@
 @use "theme";
-@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500..700&family=Inter:wght@400..700&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500..700&display=swap");
 
 * {
     box-sizing: border-box;
@@ -38,11 +39,55 @@ html, body {
 .main {
     padding: 20px 40px;
     padding-top: 0;
+}
 
-    &__intro_hero {
-        &>img {
-            width: 200px;
-            border-radius: 7px;
+.main--home {
+    &__hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+
+        &>h2 {
+            margin-top: 0;
+            margin-bottom: 40px;
+
+            width: 60%;
+            min-width: 400px;
+
+            font-size: 32pt;
+        }
+
+        &>a {
+            border: 1px solid var(--foreground);
+            border-radius: 100px;
+
+            padding: 16px 40px;
+
+            color: var(--foreground);
+            font-size: 16pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            transition: 0.2s all;
+
+            &::after {
+                margin-left: 15px;
+
+                content: '🡒';
+                font-size: 16pt;
+                font-weight: 700;
+                font-family: "Inter";
+            }
+
+            &:hover {
+                color: var(--background);
+                background-color: var(--foreground);
+            }
         }
     }
 }
