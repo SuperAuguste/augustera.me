@@ -35,7 +35,8 @@ async function generate() {
 
     // try {await fs.mkdir("public/fr");} catch {}
     // try {await fs.mkdir("public/fr/resume");} catch {}
-    
+
+    await compile("404.ejs", {}, "404.html");
     await compile("index.ejs", {}, "index.html");
     await compile("resume.ejs", {}, "resume/index.html");
     await fs.writeFile("public/style.css", sass.compile("style/style.scss", { style: "compressed" }).css);

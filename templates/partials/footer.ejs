@@ -8,6 +8,14 @@
 </div>
 
 <script>
+    window.addEventListener("load", () => {
+        document.querySelector(".preload").classList.remove("preload");
+    });
+
+    document.querySelector(".nav__borgor").addEventListener("click", () => {
+        document.querySelector(".nav--slideout").classList.toggle("shown");
+    });
+
     function updateTheme() {
         document.documentElement.className = "";
 

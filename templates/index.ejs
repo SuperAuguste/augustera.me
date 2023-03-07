@@ -2,9 +2,22 @@
 
 <main class="main main--home">
     <div class="main--home__hero">
-        <h2><i>Vision-driven</i> enough to publish an unfinished website</h2>
+        <h2><u id="buzzword">JavaScript-less</u> enough to publish an unfinished website</h2>
         <a href="/resume">I have a resume though</a>
     </div>
 </main>
+
+<script>
+    const buzzwords = [
+        "Vision-driven",
+        "Goal-oriented",
+        "Synergistic",
+        "Best-in-breed",
+        "Agile",
+        "Paradigm-shifting",
+        "Holistic",
+    ];
+    document.getElementById("buzzword").innerText = buzzwords[Math.floor(Math.random() * buzzwords.length)];
+</script>
 
 <%- await include("partials/footer.ejs") %>
