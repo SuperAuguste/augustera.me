@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Zig Language Server",
+        "featured": true,
+        "url": "https://github.com/zigtools/zls"
+    },
+    {
+        "name": "ZLS Fuzzer",
+        "featured": true,
+        "url": "https://github.com/zigtools/sus"
+    },
+    {
+        "name": "Zig JNI Bindings",
+        "featured": true,
+        "url": "https://github.com/zig-java/jui"
+    },
+    {
+        "name": "The Snitch Website",
+        "featured": true,
+        "url": "https://snitchbcc.com/"
+    },
+    {
+        "name": "Software You Can Love Website",
+        "featured": true,
+        "url": "https://softwareyoucanlove.ca/"
+    },
+    {
+        "name": "Zig Embedded Group Website",
+        "featured": true,
+        "url": "https://zeg.random-projects.net/"
+    },
+    {
+        "name": "ZEG AVR Bootloader",
+        "featured": true,
+        "url": "https://github.com/ZigEmbeddedGroup/avrboot/"
+    }
+]

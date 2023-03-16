@@ -1,0 +1,19 @@
+<%
+    let projects = await content("projects.json", locale);
+    if (typeof filter !== "undefined")
+        projects = projects.filter(filter);
+%>
+
+<div class="card_list">
+    <% if (style === "small") { %>
+        <% for (const project of projects) { %>
+            <a href="<%- project.url %>" class="card">
+                <span class="card__title"><%= project.name %></span>
+            </a>
+        <% } %>
+
+        <a href="/projects" class="card card--highlighted">
+            <span class="card__title arrow_end">See all projects</span>
+        </a>
+    <% } %>
+</div>

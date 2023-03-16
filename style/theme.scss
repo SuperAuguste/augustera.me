@@ -9,9 +9,10 @@
     --foreground-sub-2: hsl(0, 0%, 60%);
 
     --background-sub: hsl(0, 0%, 85%);
-    --background-sub-2: hsl(0, 0%, 80%);
+    --background-sub-2: hsl(0, 0%, 78%);
 
     --highlight-sub: hsl(160, 90%, 50%);
+    --highlight-sub-2: hsl(160, 90%, 20%);
 }
 
 @mixin dark {
@@ -28,6 +29,7 @@
     --background-sub-2: hsl(0, 0%, 20%);
 
     --highlight-sub: hsl(160, 50%, 30%);
+    --highlight-sub-2: hsl(160, 50%, 70%);
 }
 
 @media (prefers-color-scheme: light) { :root { @include light; } }
@@ -47,6 +49,7 @@
     :root {
         @include light;
         --background: white;
+        font-size: 16px !important;
 
         .print_hide {
             display: none;
