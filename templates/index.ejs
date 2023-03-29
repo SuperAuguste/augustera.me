@@ -3,7 +3,13 @@
 <main class="main main--home">
     <div class="main--home__hero">
         <h2><u id="buzzword">JavaScript-less</u> enough to publish an unfinished website</h2>
-        <a href="/resume">I have a resume though</a>
+        <a href="/resume" class="arrow_end">I have a resume though</a>
+    </div>
+
+    <div class="main--home__highlight">
+        <h2 style="margin-bottom: 20px;">Highlighted Projects</h2>
+
+        <%- await include("partials/projects.ejs", {filter: project => project.featured, style: "small"}) %>
     </div>
 </main>
 
