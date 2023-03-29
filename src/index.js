@@ -32,6 +32,7 @@ async function compile(template, data, dest) {
 async function generate() {
     try {await fs.mkdir("public");} catch {}
     try {await fs.mkdir("public/resume");} catch {}
+    try {await fs.mkdir("public/projects");} catch {}
 
     // try {await fs.mkdir("public/fr");} catch {}
     // try {await fs.mkdir("public/fr/resume");} catch {}
@@ -39,7 +40,9 @@ async function generate() {
     await compile("404.ejs", {}, "404.html");
     await compile("index.ejs", {}, "index.html");
     await compile("resume.ejs", {}, "resume/index.html");
+    await compile("projects.ejs", {}, "projects/index.html");
     await fs.writeFile("public/style.css", sass.compile("style/style.scss", { style: "compressed" }).css);
+    try {await fs.cp("static", "public/static", {recursive: true});} catch {}
 }
 
 generate();

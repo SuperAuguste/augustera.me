@@ -4,16 +4,36 @@
         projects = projects.filter(filter);
 %>
 
-<div class="card_list">
+<div class="card_list<%= style === "full" ? " card_list--large" : "" %>">
     <% if (style === "small") { %>
         <% for (const project of projects) { %>
-            <a href="<%- project.url %>" class="card">
-                <span class="card__title"><%= project.name %></span>
+            <a href="<%- project.href %>" class="card card--interactive">
+                <div class="card__body">
+                    <span class="card__body__title"><%= project.name %></span>
+                </div>
             </a>
         <% } %>
 
-        <a href="/projects" class="card card--highlighted">
-            <span class="card__title arrow_end">See all projects</span>
+        <a href="/projects" class="card card--highlighted card--interactive">
+            <div class="card__body">
+                <span class="card__body__title arrow_end">See all projects</span>
+            </div>
         </a>
+    <% } else if (style === "full") { %>
+        <% for (const project of projects) { %>
+            <div class="card">
+                <img src="<%= project.img || "/static/rainbowoflove.png" %>" alt="Placeholder">
+
+                <div class="card__body">
+                    <span class="card__body__title"><%= project.name %></span>
+
+                    <p style="margin-bottom: 0;"><%= project.description %></p>
+                </div>
+
+                <div class="card__links">
+                    <a href="<%= project.href %>">Learn More</a>
+                </div>
+            </div>
+        <% } %>
     <% } %>
 </div>
