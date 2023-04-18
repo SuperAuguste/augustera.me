@@ -12,6 +12,15 @@
     },
     "experience": [
         {
+            "title": "Writing Language Tooling at <a href=\"https://sourcegraph.com/\">Sourcegraph</a>",
+            "time": "Apr. 2023 - ",
+            "points": [
+                "Applying skills learnt while working on Zig tooling to dozens of languages.",
+                "Working remotely with a top-notch team to index the biggest codebases, fast.",
+                "Collaborating across various teams to produce an amazing final product."
+            ]
+        },
+        {
             "title": "Designing, Developing <a href=\"https://softwareyoucanlove.ca/\">Zig Conference Website</a>",
             "time": "Dec. 2022 - ",
             "points": [
