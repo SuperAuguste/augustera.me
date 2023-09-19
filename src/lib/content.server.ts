@@ -12,6 +12,17 @@ export interface Project {
 	description: string;
 }
 
+export interface Experience {
+	title: string;
+	time: string;
+	points: string[];
+}
+
+export interface Resume {
+	blurbs: any;
+	experience: Experience[];
+}
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
