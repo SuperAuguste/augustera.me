@@ -1,7 +1,8 @@
-import { loadJSON, type Project } from "$lib/content.server.js";
+import type { Project } from "$lib/content";
+import projects from "$lib/content/en/projects.json";
 
 export async function load() {
 	return {
-		projects: (await loadJSON("projects.json")) as Project[],
+		projects: projects as Project[],
 	};
 }

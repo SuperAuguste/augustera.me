@@ -22,14 +22,3 @@ export interface Resume {
 	blurbs: any;
 	experience: Experience[];
 }
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-export async function loadJSON(file: string, language: Language = "en") {
-	return JSON.parse(
-		(
-			await readFile(join(__dirname, "../../content", language, file))
-		).toString(),
-	);
-}

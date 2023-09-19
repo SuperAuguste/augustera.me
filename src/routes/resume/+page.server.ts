@@ -1,7 +1,8 @@
-import { loadJSON, type Resume } from "$lib/content.server.js";
+import type { Resume } from "$lib/content";
+import resume from "$lib/content/en/resume.json";
 
 export async function load() {
 	return {
-		resume: (await loadJSON("resume.json")) as Resume,
+		resume: resume as Resume,
 	};
 }
