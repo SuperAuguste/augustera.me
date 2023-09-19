@@ -23,7 +23,6 @@
 			.filter((proj: Project) => proj.featured)
 			.map((proj: Project) => ({
 				title: proj.name,
-				thumb: proj.img,
 				href: proj.href,
 				interactive: true,
 			})),

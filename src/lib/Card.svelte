@@ -49,7 +49,11 @@
 	{/if}
 
 	{#if info.links && info.links.length > 0}
-		<div class="links"></div>
+		<div class="links">
+			{#each info.links as link}
+				<a href={link.href}>{link.title}</a>
+			{/each}
+		</div>
 	{/if}
 </a>
 
