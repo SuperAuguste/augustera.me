@@ -1,0 +1,32 @@
+<script lang="ts">
+	import { page } from "$app/stores";
+	import Cards from "$lib/Cards.svelte";
+	import type { Project } from "$lib/content.server";
+
+	const projects = $page.data.projects.map((proj: Project) => ({
+		title: proj.name,
+		thumbHref: proj.img ?? "/img/rainbowoflove.png",
+		content: proj.description,
+		links: [
+			{
+				title: "Learn More",
+				href: proj.href,
+			},
+		],
+	}));
+</script>
+
+<div>
+	<h2>Projects</h2>
+
+	<p>
+		Over the years, I've accumulated quite the list of projects. Here you'll
+		find a collection of my favorite projects that combine my passion for
+		programming and design. From websites to developer tooling, I love
+		creating functional and visually appealing experiences that solve
+		problems and bring joy to users. Take a look around and let me know what
+		you think!
+	</p>
+</div>
+
+<Cards items={projects} large={true} />
