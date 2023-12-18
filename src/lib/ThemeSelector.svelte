@@ -19,7 +19,7 @@
 	}
 </script>
 
-<div>
+<div class="print_hide">
 	<label for="theme_selector">Theme</label>
 	<select id="theme_selector" on:change={onChange}>
 		<option value="system" selected={$theme === "system"}

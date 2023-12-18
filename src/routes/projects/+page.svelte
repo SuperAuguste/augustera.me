@@ -16,6 +16,10 @@
 	}));
 </script>
 
+<svelte:head>
+	<title>Auguste Rame - Projects</title>
+</svelte:head>
+
 <div>
 	<h2>Projects</h2>
 

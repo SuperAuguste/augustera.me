@@ -18,7 +18,7 @@
 		"featured": true,
 		"href": "https://github.com/zig-java/jui",
 		"img": "/img/tbjui.png",
-		"description": "Bidirectional JNI interface written from scratch in Zig. Used by TigerBeetle to power their Java client."
+		"description": "Bidirectional JNI interface written from scratch in Zig. Previously used by TigerBeetle to power their Java client."
 	},
 	{
 		"name": "JAZ",

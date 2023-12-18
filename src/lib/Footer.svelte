@@ -1,5 +1,5 @@
-<footer>
-	<span>Auguste Rame - All Rights Reserved</span>
+<footer class="print_hide">
+	<span>&copy; Auguste Rame {new Date().getFullYear()}</span>
 </footer>
 
 <style lang="scss">

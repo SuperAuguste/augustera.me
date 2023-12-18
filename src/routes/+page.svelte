@@ -2,7 +2,7 @@
 	import { page } from "$app/stores";
 	import { browser } from "$app/environment";
 	import Cards from "$lib/Cards.svelte";
-	import type { Project } from "$lib/content.server";
+	import type { Project } from "$lib/content";
 
 	const buzzwords = [
 		"Vision-driven",
@@ -12,6 +12,8 @@
 		"Agile",
 		"Paradigm-shifting",
 		"Holistic",
+		"Data-driven",
+		"Product-focused"
 	];
 
 	const buzzword = browser
@@ -35,6 +37,10 @@
 		},
 	];
 </script>
+
+<svelte:head>
+	<title>Auguste Rame</title>
+</svelte:head>
 
 <div class="hero">
 	<h2>

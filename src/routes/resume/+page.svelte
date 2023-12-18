@@ -1,17 +1,20 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import type { Resume } from "$lib/content.server";
+	import type { Resume } from "$lib/content";
 
 	const resume = $page.data.resume as Resume;
 </script>
+
+<svelte:head>
+	<title>Auguste Rame - Resume</title>
+</svelte:head>
 
 <div class="contact">
 	<a href="https://github.com/SuperAuguste">SuperAuguste on GitHub</a>
 	<span>&bull;</span>
 	<a href="https://www.linkedin.com/in/auguste-rame"
 		>Auguste Rame on LinkedIn</a
-	> <span>&bull;</span>
-	<a href="https://discord.gg/zig">aurame @ discord.gg/zig</a>
+	>
 	<span class="print_hide">&bull;</span>
 	<span class="print_hide"
 		><i>(psst, you can print this page to get a nice PDF of it)</i></span
@@ -20,41 +23,43 @@
 
 <div class="hero">
 	<div>
-		<h3>{resume.blurbs.about.title}</h3>
-		<p>
-			{@html resume.blurbs.about.text}
-		</p>
+		<svelte:component this={resume.about.content} />
 	</div>
 
 	<div>
-		<h3>{resume.blurbs.skills.title}</h3>
-		<p>
-			{@html resume.blurbs.skills.text}
-		</p>
+		<svelte:component this={resume.skills.content} />
 	</div>
 </div>
 
 <div class="experience">
-	<h3>{resume.blurbs.experience}</h3>
+	<h3>Experience</h3>
 
 	<ul>
 		{#each resume.experience as experience}
 			<li>
-				<header>
-					<h4>
-						{@html experience.title}
-					</h4>
-					<div><div></div></div>
-					<time>{@html experience.time}</time>
-				</header>
+				<span class="date">
+					{experience.meta.start} - {experience.meta.end ?? ""} 
+				</span>
+				<div class="details">
+					<svelte:component this={experience.content} />
+				</div>
+			</li>
+		{/each}
+	</ul>
+</div>
 
-				<ul>
-					{#each experience.points as point}
-						<li>
-							{@html point}
-						</li>
-					{/each}
-				</ul>
+<div class="talks">
+	<h3>Talks</h3>
+
+	<ul>
+		{#each resume.talks as talk}
+			<li>
+				<span class="date">
+					{talk.meta.date}
+				</span>
+				<div class="details">
+					<svelte:component this={talk.content} />
+				</div>
 			</li>
 		{/each}
 	</ul>
@@ -68,21 +73,21 @@
 		& > * {
 			flex: 1;
 
-			& > h3 {
+			:global(h3) {
 				margin-top: 1.5rem;
 				margin-bottom: 0.7rem;
 			}
 
-			& > p {
+			:global(p) {
 				margin-top: 0px;
 			}
 		}
 	}
 
-	.experience {
-		& > h3 {
+	.experience, .talks {
+		h3 {
 			margin-top: 1.5rem;
-			margin-bottom: 0.9rem;
+			margin-bottom: 1.25rem;
 		}
 
 		& > ul {
@@ -95,49 +100,31 @@
 
 				margin-bottom: 10px;
 
-				& > header {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-
-					margin-bottom: 7.5px;
-
-					& > h4 {
-						margin: 0;
-					}
-
-					& > div {
-						display: flex;
-						flex: 1;
-						justify-content: space-around;
-
-						& > div {
-							border-radius: 100px;
-
-							width: calc(100% - 40px);
-							height: 3px;
-
-							background-color: var(--foreground-sub-2);
-						}
-					}
-
-					& > time {
-						color: var(--foreground-sub);
-						font-size: 20px;
-						font-family: "Sofia Sans";
-						font-weight: 500;
-					}
+				:global(h4) {
+					margin-bottom: 0.25rem;
+					line-height: 1.15;
 				}
 
-				& > ul {
+				:global(ul) {
 					list-style: circle;
-					padding-left: 40px;
+					padding-left: 2rem;
+				}
 
-					& > li {
-						line-height: 1.35;
+				:global(li) {
+					line-height: 1.35;
 
-						margin-bottom: 5px;
-					}
+					margin-bottom: 0.3rem;
+				}
+
+				:global(p) {
+					margin-top: 0.5rem;
+					margin-bottom: 0.75rem;
+				}
+
+				.date {
+					display: block;
+					margin-top: 1rem;
+					margin-bottom: 0.15rem;
 				}
 			}
 		}

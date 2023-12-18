@@ -53,6 +53,12 @@
 			}
 		}
 
+		@media only screen and (min-width: 1600px) {
+			:root {
+				font-size: 18px;
+			}
+		}
+
 		html,
 		body {
 			margin: 0;
@@ -110,6 +116,10 @@
 
 		u {
 			text-decoration: underline;
+		}
+
+		code {
+			font-family: 'Courier New', Courier, monospace;
 		}
 
 		@mixin light {
