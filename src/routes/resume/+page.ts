@@ -28,6 +28,7 @@ export async function load() {
 		if (a.meta.end === undefined && b.meta.end !== undefined) return -1;
 		return new Date(b.meta.start) - new Date(a.meta.start);
 	});
+	talks.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date));
 
 	const resume: Resume = {
 		about: {
