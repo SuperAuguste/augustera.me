@@ -3,7 +3,7 @@ start: October 2022
 end: January 2023
 ---
 
-#### Created Zig SCIP Indexer for Sourcegraph
+#### Created [Zig SCIP Indexer](https://github.com/zigtools/scip-zig) for Sourcegraph
 
 - Developed a Protocol Buffers encoder and decoder from scratch in Zig
 - Implemented Zig static semantic analysis logic using ZLS as a reference
