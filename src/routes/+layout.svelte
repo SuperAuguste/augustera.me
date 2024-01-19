@@ -19,11 +19,10 @@
 <style lang="scss">
 	@import url("../lib/style/reset.scss");
 	@import url("https://rsms.me/inter/inter.css");
-	@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500..700&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500..700&display=swap");
 
 	main {
 		padding: 1.25rem 2.5rem;
-		padding-top: 0;
 		flex: 1 1 0;
 	}
 
@@ -44,10 +43,16 @@
 
 		:root {
 			font-size: 16px;
-			font-family: "Sofia Sans";
+			font-family: "Archivo";
 		}
 
-		@media only screen and (max-width: 800px) {
+		@media only screen and (max-width: 500px) {
+			:root {
+				font-size: 13px;
+			}
+		}
+
+		@media only screen and (min-width: 500px) and (max-width: 800px) {
 			:root {
 				font-size: 14px;
 			}
@@ -81,6 +86,8 @@
 		p {
 			margin-top: 1.5rem;
 			margin-bottom: 1.5rem;
+
+			line-height: 1.5;
 		}
 
 		h1,
@@ -89,7 +96,7 @@
 		h4,
 		h5,
 		h6 {
-			font-family: "Sofia Sans";
+			font-family: "Archivo";
 		}
 
 		h2 {
@@ -126,17 +133,16 @@
 			color-scheme: light;
 
 			--foreground: hsl(0, 0%, 10%);
-			--background: hsl(0, 0%, 90%);
-			--highlight: hsl(160, 90%, 25%);
+			--background: hsl(0, 0%, 95%);
+			--highlight: hsl(160, 90%, 20%);
 
 			--foreground-sub: hsl(0, 0%, 20%);
 			--foreground-sub-2: hsl(0, 0%, 60%);
 
-			--background-sub: hsl(0, 0%, 85%);
-			--background-sub-2: hsl(0, 0%, 78%);
+			--background-sub: hsl(0, 0%, 90%);
+			--background-sub-2: hsl(0, 0%, 85%);
 
-			--highlight-sub: hsl(160, 90%, 50%);
-			--highlight-sub-2: hsl(160, 90%, 20%);
+			--highlight-sub: hsl(160, 90%, 15%);
 		}
 
 		@mixin dark {
@@ -152,8 +158,7 @@
 			--background-sub: hsl(0, 0%, 15%);
 			--background-sub-2: hsl(0, 0%, 20%);
 
-			--highlight-sub: hsl(160, 50%, 30%);
-			--highlight-sub-2: hsl(160, 50%, 70%);
+			--highlight-sub: hsl(160, 50%, 70%);
 		}
 
 		@media (prefers-color-scheme: light) {
@@ -188,7 +193,7 @@
 				font-size: 16px !important;
 
 				.print_hide {
-					display: none;
+					display: none !important;
 				}
 			}
 

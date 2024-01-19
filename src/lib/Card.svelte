@@ -89,8 +89,8 @@
 			background-color: var(--highlight);
 
 			&.interactive:hover {
-				border-color: var(--highlight-sub-2);
-				background-color: var(--highlight-sub-2);
+				border-color: var(--highlight-sub);
+				background-color: var(--highlight-sub);
 			}
 		}
 	}

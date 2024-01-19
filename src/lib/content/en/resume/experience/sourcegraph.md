@@ -1,5 +1,6 @@
 ---
 start: April 2023
+end: December 2023
 ---
 
 #### Code Intel and Cody Intern at [Sourcegraph](https://sourcegraph.com)

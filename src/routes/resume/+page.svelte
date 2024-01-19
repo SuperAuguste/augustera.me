@@ -9,6 +9,8 @@
 	<title>Auguste Rame - Resume</title>
 </svelte:head>
 
+<h2>Resume</h2>
+
 <div class="contact">
 	<a href="https://github.com/SuperAuguste">SuperAuguste on GitHub</a>
 	<span>&bull;</span>
@@ -66,6 +68,10 @@
 </div>
 
 <style lang="scss">
+	.contact {
+		margin-top: 1.5rem;
+	}
+
 	.hero {
 		display: flex;
 		gap: 2.5rem;
