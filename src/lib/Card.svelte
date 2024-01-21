@@ -64,7 +64,7 @@
 		flex-direction: column;
 
 		border: 3px solid var(--foreground);
-		border-radius: 10px;
+		border-radius: 0.5rem;
 
 		color: var(--foreground);
 		text-decoration: none;

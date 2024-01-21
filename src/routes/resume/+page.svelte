@@ -104,10 +104,10 @@
 			& > li {
 				break-inside: avoid;
 
-				margin-bottom: 10px;
+				margin-bottom: 1.75rem;
 
 				:global(h4) {
-					margin-bottom: 0.25rem;
+					margin-bottom: 0.5rem;
 					line-height: 1.15;
 				}
 
@@ -130,7 +130,8 @@
 				.date {
 					display: block;
 					margin-top: 1rem;
-					margin-bottom: 0.15rem;
+					margin-bottom: 0.25rem;
+					font-size: 1.05em;
 				}
 			}
 		}

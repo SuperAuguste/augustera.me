@@ -43,7 +43,7 @@
 		font-size: 2.25em;
 		font-weight: 600;
 		line-height: 1;
-		letter-spacing: -1.5px;
+		letter-spacing: -0.03em;
 
 		& > * {
 			color: var(--foreground);

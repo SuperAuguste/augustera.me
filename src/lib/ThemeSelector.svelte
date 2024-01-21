@@ -35,7 +35,7 @@
 		position: fixed;
 
 		border: 3px solid var(--foreground);
-		border-radius: 10px;
+		border-radius: 0.5rem;
 
 		padding: 0.625rem 1.25rem;
 

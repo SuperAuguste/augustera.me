@@ -30,7 +30,7 @@
 			})),
 		{
 			title: "See all projects",
-			href: "/projects/",
+			href: "/projects",
 			highlighted: true,
 			interactive: true,
 			arrowed: true,
