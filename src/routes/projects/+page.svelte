@@ -23,12 +23,10 @@
 <h2>Projects</h2>
 
 <p>
-	Over the years, I've accumulated quite the list of projects. Here you'll
-	find a collection of my favorite projects that combine my passion for
+	Here's a collection of my favorite projects that combine my passion for
 	programming and design. From websites to developer tooling, I love
 	creating functional and visually appealing experiences that solve
-	problems and bring joy to users. Take a look around and let me know what
-	you think!
+	complex technical problems while bring joy to users.
 </p>
 
 <Cards items={projects} large={true} />

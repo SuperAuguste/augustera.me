@@ -3,6 +3,10 @@
 	import type { Resume } from "$lib/content";
 
 	const resume = $page.data.resume as Resume;
+
+	function printThisPage() {
+		print();
+	}
 </script>
 
 <svelte:head>
@@ -17,9 +21,11 @@
 	<a href="https://www.linkedin.com/in/auguste-rame"
 		>Auguste Rame on LinkedIn</a
 	>
+	<span>&bull;</span>
+	<a href="/contact">augustera.me/contact</a>
 	<span class="print_hide">&bull;</span>
 	<span class="print_hide"
-		><i>(psst, you can print this page to get a nice PDF of it)</i></span
+		><i>(psst, you can <a on:click={printThisPage} on:keypress={printThisPage} href="#" role="button">print this page</a> to get a nice PDF of it)</i></span
 	>
 </div>
 
@@ -70,6 +76,7 @@
 <style lang="scss">
 	.contact {
 		margin-top: 1.5rem;
+		line-height: 1.5;
 	}
 
 	.hero {

@@ -5,6 +5,8 @@
 		{ href: "/", title: "Home" },
 		{ href: "/resume", title: "Resume" },
 		{ href: "/projects", title: "Projects" },
+		{ href: "/contact", title: "Contact" },
+		// { href: "/hire-me", title: "Hire Me" },
 	];
 </script>
 
@@ -28,6 +30,7 @@
 		padding: 0.75rem 2.5rem;
 
 		font-size: 1.075em;
+		font-weight: 500;
 		
 		background-color: var(--background-sub-2);
 
