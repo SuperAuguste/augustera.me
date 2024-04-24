@@ -42,18 +42,18 @@
 <div class="experience">
 	<h3>Experience</h3>
 
-	<ul>
+	<div class="list">
 		{#each resume.experience as experience}
-			<li>
+			<div>
 				<span class="date">
 					{experience.meta.start} - {experience.meta.end ?? ""} 
 				</span>
 				<div class="details">
 					<svelte:component this={experience.content} />
 				</div>
-			</li>
+			</div>
 		{/each}
-	</ul>
+	</div>
 </div>
 
 <div class="talks">
@@ -103,30 +103,20 @@
 			margin-bottom: 1.25rem;
 		}
 
-		& > ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-
-			& > li {
+		&>.list {
+			&>div {
 				break-inside: avoid;
 
-				margin-bottom: 1.75rem;
+				margin-bottom: 1rem;
+
+				border: 1px solid var(--background-sub-2);
+				border-radius: 0.5rem;
+				padding: 1.75rem;
+				background-color: var(--background-sub);
 
 				:global(h4) {
-					margin-bottom: 0.5rem;
+					margin-bottom: 1rem;
 					line-height: 1.15;
-				}
-
-				:global(ul) {
-					list-style: circle;
-					padding-left: 2rem;
-				}
-
-				:global(li) {
-					line-height: 1.35;
-
-					margin-bottom: 0.3rem;
 				}
 
 				:global(p) {
@@ -136,7 +126,6 @@
 
 				.date {
 					display: block;
-					margin-top: 1rem;
 					margin-bottom: 0.25rem;
 					font-size: 1.05em;
 				}
