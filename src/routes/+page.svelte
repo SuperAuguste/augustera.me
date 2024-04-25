@@ -76,7 +76,7 @@
 		}
 
 		& > a {
-			border: 3px solid var(--foreground);
+			border: 1px solid var(--background-sub-2);
 			border-radius: 100px;
 
 			padding: 1rem 2.5rem;
@@ -87,13 +87,13 @@
 			text-transform: uppercase;
 			text-decoration: none;
 
+			background-color: var(--background-sub);
 			transition:
 				0.2s color,
 				0.2s background-color;
 
 			&:hover {
-				color: var(--background);
-				background-color: var(--foreground);
+				background-color: var(--background-sub-2);
 			}
 		}
 	}

@@ -63,7 +63,7 @@
 
 		flex-direction: column;
 
-		border: 3px solid var(--foreground);
+		border: 1px solid var(--background-sub-2);
 		border-radius: 0.5rem;
 
 		color: var(--foreground);
@@ -97,7 +97,7 @@
 
 	img {
 		width: 100%;
-		height: 10rem;
+		height: 12.5rem;
 
 		object-fit: cover;
 	}

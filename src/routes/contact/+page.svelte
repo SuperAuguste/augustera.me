@@ -21,7 +21,7 @@
 		list-style: circle;
 		padding-left: 1rem;
 		
-		& > li {
+		&>li {
 			break-inside: avoid;
 			line-height: 2;			
 		}

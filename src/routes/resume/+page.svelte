@@ -81,10 +81,12 @@
 
 	.hero {
 		display: flex;
-		gap: 2.5rem;
+		flex-wrap: wrap;
+		column-gap: 2.5rem;
 
 		& > * {
 			flex: 1;
+			min-width: 30ch;
 
 			:global(h3) {
 				margin-top: 1.5rem;
@@ -103,42 +105,46 @@
 			margin-bottom: 1.25rem;
 		}
 
-		& > ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
+		&>ul {
+			&>li {
+				position: relative;
 
-			& > li {
 				break-inside: avoid;
 
-				margin-bottom: 1.75rem;
+				margin-bottom: 1rem;
+
+				border: 1px solid var(--background-sub-2);
+				border-radius: 0.5rem;
+				background-color: var(--background-sub);
 
 				:global(h4) {
-					margin-bottom: 0.5rem;
+					margin-bottom: 1rem;
 					line-height: 1.15;
-				}
-
-				:global(ul) {
-					list-style: circle;
-					padding-left: 2rem;
-				}
-
-				:global(li) {
-					line-height: 1.35;
-
-					margin-bottom: 0.3rem;
 				}
 
 				:global(p) {
 					margin-top: 0.5rem;
-					margin-bottom: 0.75rem;
+					margin-bottom: 0;
 				}
 
 				.date {
-					display: block;
-					margin-top: 1rem;
-					margin-bottom: 0.25rem;
+					margin-left: 1.5rem;
+					display: inline-block;
+					border-bottom-left-radius: 0.25rem;
+					border-bottom-right-radius: 0.25rem;
+					padding: 0.5rem;
 					font-size: 1.05em;
+					background-color: var(--background-sub-2);
+
+					@media print {
+						border: 1px solid var(--background-sub-2);
+						border-top: 0;
+					}
+				}
+
+				.details {
+					padding: 1.5rem;
+					padding-top: 0.75rem;
 				}
 			}
 		}

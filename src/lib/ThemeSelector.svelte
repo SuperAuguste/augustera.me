@@ -34,7 +34,7 @@
 	div {
 		position: fixed;
 
-		border: 3px solid var(--foreground);
+		border: 1px solid var(--background-sub-2);
 		border-radius: 0.5rem;
 
 		padding: 0.625rem 1.25rem;
@@ -42,7 +42,7 @@
 		bottom: 0.8rem;
 		right: 0.8rem;
 
-		background-color: var(--background);
+		background-color: var(--background-sub);
 
 		& > label {
 			margin-right: 0.25rem;

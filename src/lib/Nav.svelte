@@ -27,12 +27,16 @@
 		display: flex;
 		gap: 2rem;
 
+		border: 1px solid var(--background-sub-2);
+		border-left: none;
+		border-right: none;
+
 		padding: 0.75rem 2.5rem;
 
 		font-size: 1.075em;
 		font-weight: 500;
 		
-		background-color: var(--background-sub-2);
+		background-color: var(--background-sub);
 
 		&>a.active {
 			color: var(--highlight-sub);
