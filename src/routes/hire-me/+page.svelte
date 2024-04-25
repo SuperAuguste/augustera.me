@@ -9,7 +9,7 @@
 </p>
 
 <p>
-	Things I'd be interested on working include, among others, in no particular order:
+	Some things I'd be particularly keen on working on in no particular order:
 </p>
 
 <ul>
@@ -17,4 +17,17 @@
 	<li>Open-source projects</li>
 	<li>"Fullstack" development (frontend, backend)</li>
 	<li>Developer tooling, especially in the compiler frontend space</li>
+	<li>Consumer-facing projects</li>
 </ul>
+
+<style>
+	ul {
+		list-style: circle;
+		padding-left: 1rem;
+		
+		&>li {
+			break-inside: avoid;
+			line-height: 2;			
+		}
+	}
+</style>

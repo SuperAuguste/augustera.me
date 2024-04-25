@@ -42,18 +42,18 @@
 <div class="experience">
 	<h3>Experience</h3>
 
-	<div class="list">
+	<ul>
 		{#each resume.experience as experience}
-			<div>
+			<li>
 				<span class="date">
 					{experience.meta.start} - {experience.meta.end ?? ""} 
 				</span>
 				<div class="details">
 					<svelte:component this={experience.content} />
 				</div>
-			</div>
+			</li>
 		{/each}
-	</div>
+	</ul>
 </div>
 
 <div class="talks">
@@ -81,10 +81,12 @@
 
 	.hero {
 		display: flex;
-		gap: 2.5rem;
+		flex-wrap: wrap;
+		column-gap: 2.5rem;
 
 		& > * {
 			flex: 1;
+			min-width: 30ch;
 
 			:global(h3) {
 				margin-top: 1.5rem;
@@ -103,15 +105,16 @@
 			margin-bottom: 1.25rem;
 		}
 
-		&>.list {
-			&>div {
+		&>ul {
+			&>li {
+				position: relative;
+
 				break-inside: avoid;
 
 				margin-bottom: 1rem;
 
 				border: 1px solid var(--background-sub-2);
 				border-radius: 0.5rem;
-				padding: 1.75rem;
 				background-color: var(--background-sub);
 
 				:global(h4) {
@@ -121,13 +124,27 @@
 
 				:global(p) {
 					margin-top: 0.5rem;
-					margin-bottom: 0.75rem;
+					margin-bottom: 0;
 				}
 
 				.date {
-					display: block;
-					margin-bottom: 0.25rem;
+					margin-left: 1.5rem;
+					display: inline-block;
+					border-bottom-left-radius: 0.25rem;
+					border-bottom-right-radius: 0.25rem;
+					padding: 0.5rem;
 					font-size: 1.05em;
+					background-color: var(--background-sub-2);
+
+					@media print {
+						border: 1px solid var(--background-sub-2);
+						border-top: 0;
+					}
+				}
+
+				.details {
+					padding: 1.5rem;
+					padding-top: 0.75rem;
 				}
 			}
 		}
