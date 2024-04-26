@@ -24,9 +24,10 @@
 	export let info: CardInfo;
 </script>
 
-<a
+<svelte:element
+	this={info.href ? "a" : "div"}
 	href={info.href}
-	class:card={true}
+	class="card"
 	class:interactive={info.interactive}
 	class:highlighted={info.highlighted}
 >
@@ -55,7 +56,7 @@
 			{/each}
 		</div>
 	{/if}
-</a>
+</svelte:element>
 
 <style lang="scss">
 	.card {
