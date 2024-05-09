@@ -3,9 +3,10 @@
 
 	const links = [
 		{ href: "/", title: "Home" },
-		{ href: "/resume", title: "Resume" },
 		{ href: "/projects", title: "Projects" },
+		{ href: "/blog", title: "Blog" },
 		{ href: "/contact", title: "Contact" },
+		{ href: "/resume", title: "Resume" },
 		{ href: "/hire-me", title: "Hire Me" },
 	];
 </script>
@@ -25,7 +26,9 @@
 <style lang="scss">
 	.nav {
 		display: flex;
-		gap: 2rem;
+		row-gap: 1rem;
+		column-gap: 2rem;
+		flex-wrap: wrap;
 
 		border: 1px solid var(--background-sub-2);
 		border-left: none;

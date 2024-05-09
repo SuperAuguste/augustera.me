@@ -12,3 +12,16 @@ export interface Resume {
 	experience: any;
 	talks: any;
 }
+
+export interface BlogPostSummary {
+	slug: string,
+	title: string;
+	publish_date: Date;
+}
+
+export interface BlogPost {
+	slug: string,
+	title: string;
+	publish_date: Date;
+	content: any;
+}
