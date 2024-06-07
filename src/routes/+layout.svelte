@@ -22,7 +22,7 @@
 	@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500..700&display=swap");
 
 	main {
-		padding: 1.25rem 2.5rem;
+		padding: 1.75rem;
 		flex: 1 1 0;
 	}
 
@@ -44,6 +44,8 @@
 		:root {
 			font-size: 16px;
 			font-family: "Archivo";
+
+			--border-radius: 0.4rem;
 		}
 
 		@media only screen and (max-width: 500px) {
@@ -128,21 +130,34 @@
 		code {
 			font-family: 'Courier New', Courier, monospace;
 		}
+		
+		button {
+			appearance: none;
+			border: none;
+			border-radius: 0;
+			background: none;
+			padding: 0;
+			font-family: "Inter";
+			text-align: inherit;
+			color: inherit;
+			font-size: inherit;
+			cursor: pointer;
+		}
 
 		@mixin light {
 			color-scheme: light;
 
 			--foreground: hsl(0, 0%, 10%);
 			--background: hsl(0, 0%, 95%);
-			--highlight: hsl(160, 90%, 20%);
+			--highlight: hsl(160, 75%, 25%);
 
 			--foreground-sub: hsl(0, 0%, 20%);
-			--foreground-sub-2: hsl(0, 0%, 60%);
+			--foreground-sub-2: hsl(0, 0%, 50%);
 
 			--background-sub: hsl(0, 0%, 90%);
 			--background-sub-2: hsl(0, 0%, 85%);
 
-			--highlight-sub: hsl(160, 90%, 15%);
+			--highlight-sub: hsl(160, 75%, 20%);
 		}
 
 		@mixin dark {
@@ -153,7 +168,7 @@
 			--highlight: hsl(160, 50%, 50%);
 
 			--foreground-sub: hsl(0, 0%, 80%);
-			--foreground-sub-2: hsl(0, 0%, 40%);
+			--foreground-sub-2: hsl(0, 0%, 50%);
 
 			--background-sub: hsl(0, 0%, 15%);
 			--background-sub-2: hsl(0, 0%, 20%);

@@ -31,7 +31,7 @@
 		border-left: none;
 		border-right: none;
 
-		padding: 0.75rem 2.5rem;
+		padding: 0.75rem 1.75rem;
 
 		font-size: 1.075em;
 		font-weight: 500;
@@ -45,7 +45,7 @@
 	}
 
 	.brand {
-		padding: 1rem 2.5rem;
+		padding: 1rem 1.75rem;
 
 		font-size: 2.25em;
 		font-weight: 600;

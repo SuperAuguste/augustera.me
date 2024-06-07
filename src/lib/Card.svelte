@@ -17,6 +17,8 @@
 
 		href?: string;
 		links?: CardLink[];
+
+		verticallyCompact?: boolean,
 	}
 </script>
 
@@ -44,7 +46,7 @@
 			{/if}
 
 			{#if info.content}
-				<p class="content">{info.content}</p>
+				<p class="content" class:vertically_compact={info.verticallyCompact}>{info.content}</p>
 			{/if}
 		</div>
 	{/if}
@@ -65,7 +67,7 @@
 		flex-direction: column;
 
 		border: 1px solid var(--background-sub-2);
-		border-radius: 0.5rem;
+		border-radius: var(--border-radius);
 
 		color: var(--foreground);
 		text-decoration: none;
@@ -115,6 +117,11 @@
 
 		.content {
 			margin-bottom: 0;
+
+			&.vertically_compact {
+				margin-top: 1rem;
+				line-height: 1;
+			}
 		}
 	}
 

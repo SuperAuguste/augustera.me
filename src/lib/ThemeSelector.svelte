@@ -23,7 +23,7 @@
 	<label for="theme_selector">Theme</label>
 	<select id="theme_selector" on:change={onChange}>
 		<option value="system" selected={$theme === "system"}
-			>Browser Default</option
+			>Auto</option
 		>
 		<option value="light" selected={$theme === "light"}>Light</option>
 		<option value="dark" selected={$theme === "dark"}>Dark</option>
@@ -35,9 +35,9 @@
 		position: fixed;
 
 		border: 1px solid var(--background-sub-2);
-		border-radius: 0.5rem;
+		border-radius: var(--border-radius);
 
-		padding: 0.625rem 1.25rem;
+		padding: 0.625rem;
 
 		bottom: 0.8rem;
 		right: 0.8rem;

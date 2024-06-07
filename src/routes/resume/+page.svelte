@@ -114,7 +114,7 @@
 				margin-bottom: 1rem;
 
 				border: 1px solid var(--background-sub-2);
-				border-radius: 0.5rem;
+				border-radius: var(--border-radius);
 				background-color: var(--background-sub);
 
 				:global(h4) {
