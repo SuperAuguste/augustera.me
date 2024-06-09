@@ -17,6 +17,7 @@
 
 		href?: string;
 		links?: CardLink[];
+		onClick?: () => void;
 
 		verticallyCompact?: boolean,
 	}
@@ -32,6 +33,9 @@
 	class="card"
 	class:interactive={info.interactive}
 	class:highlighted={info.highlighted}
+	on:click={info.onClick}
+	role={info.onClick ? "button" : undefined}
+	tabindex={info.onClick ? 0 : undefined}
 >
 	{#if info.thumbHref}
 		<img src={info.thumbHref} alt={info.thumbAlt} />

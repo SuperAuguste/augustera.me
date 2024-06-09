@@ -38,6 +38,7 @@
 
 			&:focus-visible {
 				outline: 3px solid var(--highlight);
+				outline-offset: 0.15rem;
 			}
 		}
 
