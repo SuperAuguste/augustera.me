@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auguste Rame</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        h2 {
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+
+        #portfolio {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .entry {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            border-top: 1px solid hsl(0, 0%, 20%);
+            border-bottom: 1px solid hsl(0, 0%, 20%);
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .entry:not(:last-child) {
+            border-bottom: none;
+        }
+
+        .showcase {
+            display: flex;
+            flex-direction: row;
+            gap: 0.25rem;
+            flex-wrap: wrap;
+        }
+
+        .showcase>img {
+            width: 20rem;
+            height: 14rem;
+
+            flex-grow: 1;
+            object-fit: scale-down;
+            background-color: var(--background-sub);
+        }
+
+        .details {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .details-title {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 400;
+            line-height: 1.25;
+        }
+
+        .details-text {
+            max-width: 70ch;
+        }
+
+        .details-text>*:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <a href="/">Auguste Rame</a>
+        <a href="/portfolio" class="active">Portfolio</a>
+        <!-- <a href="/blog">Blog</a> -->
+    </div>
+
+    <main>
+        <div class="section">
+            <h2>Selected Projects</h2>
+        </div>
+
+        <div id="portfolio">
+            <div class="entry">
+                <div class="details">
+                    <h2 class="details-title">
+                        <a href="https://github.com/zigtools/zls" target="_blank">Zig Language Server</a>
+                    </h2>
+
+                    <span class="details-text">
+                        I created the Zig Language Server in 2020 and maintained it on-and-off until 2024.
+                        Today, the Zig Language Server has over 10,000 users.
+                        I fundraised over $14,000 (as of October 2024) to pay
+                        project maintainers. I also <a href="https://www.youtube.com/watch?v=npb1rAYHpw8">gave talks on ZLS</a>
+                        and discussed the project on various <a href="https://www.youtube.com/watch?v=h_7o3yroYy4">podcasts</a>. 
+                    </span>
+                </div>
+
+                <div class="showcase">
+                    <img src="/img/zls/zls-opt.svg">
+                    <img src="/img/zls/example.png">
+                    <img src="/img/zls/sycl-2023.jpg">
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="details">
+                    <h2 class="details-title">
+                        <a href="https://snitchbcc.com" target="_blank">The Snitch</a>
+                    </h2>
+
+                    <span class="details-text">
+                        I cofounded the Snitch satirical newspaper in 2019 and designed and developed our website.
+                        I also directed writing, editing, and publishing as editor-in-chief from 2020 to 2022.
+                    </span>
+                </div>
+
+                <div class="showcase">
+                    <img src="/img/snitchbcc/index.png">
+                    <img src="/img/snitchbcc/about.png">
+                    <img src="/img/snitchbcc/article.png">
+                    <img src="/img/snitchbcc/quiz.png">
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="details">
+                    <h2 class="details-title">
+                        <a href="https://softwareyoucan.love/" target="_blank">SYCL</a> 2024 Badge and Volunteer
+                    </h2>
+
+                    <span class="details-text">
+                        I helped write the simulator and userspace drawing code for the Software You Can Love 2024 badge and
+                        directed the in-person workshop component when the original workshop leader couldn't make it to
+                        the conference. During talk days, I ran the microphone around for Q&As.
+                    </span>
+                </div>
+
+                <div class="showcase">
+                    <img src="/img/sycl-2024/simulator.png">
+                    <img src="/img/sycl-2024/workshop.jpg">
+                    <img src="/img/sycl-2024/king-and-i.jpg">
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="details">
+                    <h2 class="details-title">
+                        SYCL 2023 <a href="https://softwareyoucanlove.ca/" target="_blank">Website</a> and Brand
+                    </h2>
+
+                    <span class="details-text">
+                        I worked with organizer Matt Knight to design and develop the Software You Can Love 2023
+                        brand and website from the ground up, which included designing a logo, badges, and a banner.
+                    </span>
+                </div>
+
+                <div class="showcase">
+                    <img src="/img/sycl-2023/logo.svg">
+                    <img src="/img/sycl-2023/index.png">
+                    <img src="/img/sycl-2023/tickets.png">
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="details">
+                    <h2 class="details-title">
+                        <a href="https://devpost.com/software/radish-battle-pass" target="_blank">Radish Battle Pass</a>
+                    </h2>
+
+                    <span class="details-text">
+                        I created the concept and frontend for this spoof of the <a href="https://radish.coop/">Radish Coop</a>'s
+                        website for the 2023 iteration of McGill's hackathon, McHacks 10. The Radish team loved the Radish Battle Pass
+                        concept as well as the tweaks we made to their UI, so they gave us free samosas for a month!
+                    </span>
+                </div>
+
+                <div class="showcase">
+                    <img src="/img/radish-battle-pass/battle-pass.png">
+                    <img src="/img/radish-battle-pass/resturants.png">
+                    <img src="/img/radish-battle-pass/resturant.png">
+                    <img src="/img/radish-battle-pass/redeem.png">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Auguste Rame
+    </footer>
+</body>
+</html>

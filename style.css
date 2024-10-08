@@ -1,0 +1,102 @@
+:root {
+    font-size: 16pt;
+
+    --foreground: hsl(0, 0%, 100%);
+    --foreground-sub: hsl(0, 0%, 80%);
+
+    --background: hsl(0, 0%, 0%);
+    --background-sub: hsl(0, 0%, 10%);
+
+    --accent: hsl(51, 100%, 50%);
+    --accent-foreground: hsl(0, 0%, 0%);
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+*::selection {
+    color: var(--accent-foreground);
+    background-color: var(--accent);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    color: var(--foreground);
+    background-color: var(--background);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@media only screen and (min-width: 2000px) {
+    :root {
+        font-size: 18pt;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    :root {
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    :root {
+        font-size: 12pt;
+    }
+}
+
+main {
+    flex: 1 1 0;
+}
+
+footer {
+    padding: 1rem;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+a {
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1rem 0;
+}
+
+.section {
+    padding: 0 1rem;
+}
+
+#menu {
+    display: grid;
+    background-color: hsl(0, 0%, 7.5%);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#menu>a {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    font-size: 1.15em;
+    color: var(--foreground);
+    text-decoration: none;
+    line-height: 1.25;
+}
+
+#menu>a.active, #menu>a:hover {
+    color: var(--accent-foreground);
+    background-color: var(--accent);
+}

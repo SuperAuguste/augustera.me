@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auguste Rame</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        #intro {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #intro>p {
+            margin-bottom: 0;
+            width: 30ch;
+            font-size: 1.5em;
+        }
+
+        #intro>div {
+            max-width: 70ch;
+        }
+
+        #blog-latest {
+            padding: 0 0.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        #blog-latest>a {
+            border: 1px solid hsl(0, 0%, 20%);
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            color: var(--foreground);
+            text-decoration: none;
+        }
+
+        #blog-latest>a:hover {
+            --foreground: var(--accent-foreground);
+            --foreground-sub: var(--accent-foreground);
+            background-color: var(--accent);
+        }
+
+        #blog-latest>a>.date {
+            color: var(--foreground-sub);
+            text-align: right;
+        }
+
+        #blog-latest>a>.spoiler {
+            font-size: 0.9em;
+        }
+        
+        #grid-header {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <a href="/" class="active">Auguste Rame</a>
+        <a href="/portfolio">Portfolio</a>
+        <!-- <a href="/blog">Blog</a> -->
+    </div>
+
+    <main>
+        <div id="intro" class="section">
+            <p>
+                I'm a programmer with over 8 years of experience in open-source systems, backend, and frontend.
+            </p>
+            <div>
+                <p>
+                    I've worked with companies like <a href="https://tigerbeetle.com">TigerBeetle</a>
+                    and <a href="https://github.com/zml/zml/">ZML</a> to solve <a href="https://ziglang.org">Zig</a>
+                    systems programming problems. I worked for <a href="https://sourcegraph.com">Sourcegraph</a> as
+                    a software engineering intern on the Code Intelligence and Cody teams, covering topics ranging from compilers
+                    to protocols to fundamental abstractions.
+                </p>
+
+                <p>
+                    I'm the creator and an ex-maintainer of the <a href="https://github.com/zigtools/zls">Zig Language Server</a>,
+                    an open-source developer tool used by thousands of Zig programmers every day.
+                </p>
+
+                <p>
+                    I spend my free time hacking on software I love, experimenting with different creative
+                    outlets like design, writing, and music, and hanging out with friends
+                    I've made in open-source.
+                </p>
+
+                <p>
+                    I'm currently a freelancer and open to contracts and full-time work - reach out at
+                    <a href="mailto:auguste@augustera.me">auguste@augustera.me</a>. You can also find me
+                    on <a href="https://github.com/SuperAuguste">GitHub</a> and <a href="https://twitter.com/hackeroftacos">Twitter</a>.
+                </p>
+            </div>
+        </div>
+        
+        <!-- <div class="section" id="grid-header-section">
+            <h2 id="grid-header">Latest Posts</h2>
+        </div>
+
+        <div id="blog-latest">
+        </div> -->
+    </main>
+
+    <footer>
+        &copy; Auguste Rame
+    </footer>
+</body>
+</html>
