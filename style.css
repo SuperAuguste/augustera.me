@@ -14,6 +14,8 @@
 * {
     box-sizing: border-box;
     line-height: 1.5;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
 }
 
 *::selection {
@@ -41,15 +43,9 @@ html, body {
     }
 }
 
-@media only screen and (max-width: 800px) {
-    :root {
-        font-size: 14pt;
-    }
-}
-
 @media only screen and (max-width: 400px) {
     :root {
-        font-size: 12pt;
+        font-size: 13pt;
     }
 }
 
