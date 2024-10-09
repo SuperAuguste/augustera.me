@@ -38,17 +38,16 @@
         }
 
         .showcase {
-            display: flex;
-            flex-direction: row;
+            display: grid;
             gap: 0.25rem;
-            flex-wrap: wrap;
+
+            grid-template-rows: 15rem;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         }
 
         .showcase>img {
-            width: 20rem;
-            height: 14rem;
-
-            flex-grow: 1;
+            width: 100%;
+            height: 100%;
             object-fit: scale-down;
             background-color: var(--background-sub);
         }
@@ -106,9 +105,9 @@
                 </div>
 
                 <div class="showcase">
-                    <img src="/img/zls/zls-opt.svg">
-                    <img src="/img/zls/example.png">
-                    <img src="/img/zls/sycl-2023.jpg">
+                    <img src="/img/zls/zls-opt.svg" alt="ZLS Logo">
+                    <img src="/img/zls/example.png" alt="Example of ZLS being used in a Zig codebase">
+                    <img src="/img/zls/sycl-2023.jpg" alt="Photo taken by Kellan of my ZLS talk at SYCL 2023">
                 </div>
             </div>
 
@@ -125,28 +124,28 @@
                 </div>
 
                 <div class="showcase">
-                    <img src="/img/snitchbcc/index.png">
-                    <img src="/img/snitchbcc/about.png">
-                    <img src="/img/snitchbcc/article.png">
-                    <img src="/img/snitchbcc/quiz.png">
+                    <img src="/img/snitchbcc/index.png" alt="The Snitch homepage">
+                    <img src="/img/snitchbcc/about.png" alt="The Snitch about page">
+                    <img src="/img/snitchbcc/article.png" alt="The Snitch article page">
+                    <img src="/img/snitchbcc/quiz.png" alt="The Snitch quiz page">
                 </div>
             </div>
 
             <div class="entry">
                 <div class="details">
                     <h2 class="details-title">
-                        <a href="https://softwareyoucan.love/" target="_blank">SYCL</a> 2024 Badge and Volunteer
+                        <a href="https://sycl.it/" target="_blank">SYCL 2024 Badge and Volunteer</a>
                     </h2>
 
                     <span class="details-text">
-                        I helped write the simulator and userspace drawing code for the Software You Can Love 2024 badge and
+                        I wrote the simulator and userspace drawing code for the Software You Can Love 2024 badge and
                         directed the in-person workshop component when the original workshop leader couldn't make it to
                         the conference. During talk days, I ran the microphone around for Q&As.
                     </span>
                 </div>
 
                 <div class="showcase">
-                    <img src="/img/sycl-2024/simulator.png">
+                    <img src="/img/sycl-2024/simulator.png" alt="">
                     <img src="/img/sycl-2024/workshop.jpg">
                     <img src="/img/sycl-2024/king-and-i.jpg">
                 </div>
@@ -155,7 +154,7 @@
             <div class="entry">
                 <div class="details">
                     <h2 class="details-title">
-                        SYCL 2023 <a href="https://softwareyoucanlove.ca/" target="_blank">Website</a> and Brand
+                        <a href="https://softwareyoucanlove.ca/" target="_blank">SYCL 2023 Website and Brand</a>
                     </h2>
 
                     <span class="details-text">
@@ -174,6 +173,44 @@
             <div class="entry">
                 <div class="details">
                     <h2 class="details-title">
+                        <a href="https://github.com/privatesuite" target="_blank">Private Suite Magazine</a>
+                    </h2>
+
+                    <span class="details-text">
+                        I programmed the Private Suite website, implementing designs conceived by head designer Seth Startix.
+                        I also wrote a few times for the illustrious vaporwave publication. Private Suite is unfortunately defunct.
+                    </span>
+                </div>
+
+                <div class="showcase">
+                    <img src="/img/psm/index.png">
+                    <img src="/img/psm/about.png">
+                    <img src="/img/psm/podcast.png">
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="details">
+                    <h2 class="details-title">
+                        <a href="https://random-projects.net" target="_blank">random-projects.net</a>
+                    </h2>
+
+                    <span class="details-text">
+                        I designed and developed my friend and open-source peer Felix's website.
+                        I worked with Felix to get the look and feel just right.
+                    </span>
+                </div>
+
+                <div class="showcase">
+                    <img src="/img/felix/index.png">
+                    <img src="/img/felix/about.png">
+                    <img src="/img/felix/projects.png">
+                </div>
+            </div>
+            
+            <div class="entry">
+                <div class="details">
+                    <h2 class="details-title">
                         <a href="https://devpost.com/software/radish-battle-pass" target="_blank">Radish Battle Pass</a>
                     </h2>
 
@@ -189,6 +226,19 @@
                     <img src="/img/radish-battle-pass/resturants.png">
                     <img src="/img/radish-battle-pass/resturant.png">
                     <img src="/img/radish-battle-pass/redeem.png">
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="details">
+                    <h2 class="details-title">
+                        <a href="https://github.com/ZigEmbeddedGroup/avrboot" target="_blank">avrboot</a>
+                    </h2>
+
+                    <span class="details-text">
+                        I implemented an AVR bootloader from the ground up for the Zig Embedded Group
+                        and flashed a real Arduino with LED flashing code using my bootloader. 
+                    </span>
                 </div>
             </div>
         </div>
