@@ -17,6 +17,41 @@
             font-weight: 400;
         }
 
+        #tag-select {
+            display: flex;
+            padding: 0.5rem;
+            flex-wrap: wrap;
+
+            gap: 0.5rem;
+        }
+
+        #tag-select>* {
+            flex-grow: 1;
+            padding: 0.25rem 1rem;
+            cursor: pointer;
+            text-align: center;
+            background-color: var(--background-sub);
+        }
+
+        #tag-select>*:hover, #tag-select>*.selected {
+            border-color: var(--accent-foreground);
+            color: var(--accent-foreground);
+            background-color: var(--accent);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+            font-size: 0.9em;
+        }
+
+        .tags>* {
+            display: block;
+            border: 1px solid currentColor;
+            padding: 0.35em 0.8em;
+        }
+
         #portfolio {
             display: flex;
             flex-wrap: wrap;
@@ -33,8 +68,21 @@
             width: 100%;
         }
 
+        .entry.hidden {
+            display: none;
+        }
+
         .entry:not(:last-child) {
             border-bottom: none;
+        }
+
+        .entry .tags {
+            color: var(--foreground-sub);
+            font-size: 0.7em;
+        }
+
+        .entry .tags>*.selected {
+            color: var(--accent);
         }
 
         .showcase {
@@ -89,8 +137,7 @@
     </div>
 
     <main>
-        <div class="section">
-            <h2>Selected Projects</h2>
+        <div id="tag-select">
         </div>
 
         <div id="portfolio">
@@ -107,6 +154,12 @@
                         project maintainers. I also <a href="https://www.youtube.com/watch?v=npb1rAYHpw8">gave talks on ZLS</a>
                         and discussed the project on various <a href="https://www.youtube.com/watch?v=h_7o3yroYy4">podcasts</a>. 
                     </span>
+                </div>
+
+                <div class="tags">
+                    <span>Systems</span>
+                    <span>Compilers</span>
+                    <span>OSS</span>
                 </div>
 
                 <div class="showcase">
@@ -126,6 +179,14 @@
                         I cofounded the Snitch satirical newspaper in 2019 and designed and developed our website.
                         I also directed writing, editing, and publishing as editor-in-chief from 2020 to 2022.
                     </span>
+                </div>
+
+                <div class="tags">
+                    <span>Frontend</span>
+                    <span>Backend</span>
+                    <span>Design</span>
+                    <span>Journalism</span>
+                    <span>OSS</span>
                 </div>
 
                 <div class="showcase">
@@ -149,6 +210,14 @@
                     </span>
                 </div>
 
+                <div class="tags">
+                    <span>Frontend</span>
+                    <span>Systems</span>
+                    <span>Embedded</span>
+                    <span>Conference</span>
+                    <span>OSS</span>
+                </div>
+
                 <div class="showcase">
                     <div><img src="/img/sycl-2024/simulator.png" alt="SYCL 2024 badge simulator"></div>
                     <div><img src="/img/sycl-2024/workshop.jpg" alt="SYCL 2024 badge workshop"></div>
@@ -166,6 +235,13 @@
                         I worked with organizer Matt Knight to design and develop the Software You Can Love 2023
                         brand and website from the ground up, which included designing a logo, badges, and a banner.
                     </span>
+                </div>
+
+                <div class="tags">
+                    <span>Frontend</span>
+                    <span>Design</span>
+                    <span>Conference</span>
+                    <span>OSS</span>
                 </div>
 
                 <div class="showcase">
@@ -187,6 +263,14 @@
                     </span>
                 </div>
 
+                <div class="tags">
+                    <span>Frontend</span>
+                    <span>Backend</span>
+                    <span>Design</span>
+                    <span>Journalism</span>
+                    <span>OSS</span>
+                </div>
+
                 <div class="showcase">
                     <div><img src="/img/psm/index.png" alt="Private Suite homepage"></div>
                     <div><img src="/img/psm/about.png" alt="Private Suite about page"></div>
@@ -204,6 +288,11 @@
                         I designed and developed my friend and open-source peer Felix's website.
                         I worked with Felix to get the look and feel just right.
                     </span>
+                </div>
+
+                <div class="tags">
+                    <span>Frontend</span>
+                    <span>Design</span>
                 </div>
 
                 <div class="showcase">
@@ -226,6 +315,13 @@
                     </span>
                 </div>
 
+                <div class="tags">
+                    <span>Frontend</span>
+                    <span>Backend</span>
+                    <span>Design</span>
+                    <span>OSS</span>
+                </div>
+
                 <div class="showcase">
                     <div><img src="/img/radish-battle-pass/battle-pass.png" alt="Radish Battle Pass battle pass page"></div>
                     <div><img src="/img/radish-battle-pass/restaurants.png" alt="Radish Battle Pass restaurants page"></div>
@@ -245,6 +341,12 @@
                         and flashed a real Arduino with LED flashing code using my bootloader. 
                     </span>
                 </div>
+
+                <div class="tags">
+                    <span>Systems</span>
+                    <span>Embedded</span>
+                    <span>OSS</span>
+                </div>
             </div>
         </div>
     </main>
@@ -252,5 +354,60 @@
     <footer>
         &copy; Auguste Rame
     </footer>
+
+    <script>
+        const tag_select = document.getElementById("tag-select");
+
+        const tags = new Set();
+        for (const tag_element of document.querySelectorAll(".entry>.tags>*")) {
+            tags.add(tag_element.innerText);
+        }
+
+        function hashChange() {
+            const tag = location.hash.replace("#", "").toLowerCase();
+
+            for (const tag_element of tag_select.children) {
+                tag_element.classList.remove("selected");
+                if (tag_element.innerText.toLowerCase() === tag || (!tag && tag_element.innerText === "All")) {
+                    tag_element.classList.add("selected");
+                }
+            }
+
+            const entries = document.querySelectorAll(".entry");
+            for (const entry of entries) {
+                if (tag) {
+                    entry.classList.add("hidden");
+                } else {
+                    entry.classList.remove("hidden");
+                }
+                
+                const tag_elements = entry.querySelectorAll(".tags>*");
+                for (const tag_element of tag_elements) {
+                    tag_element.classList.remove("selected");
+                    if (tag_element.innerText.toLowerCase() === tag) {
+                        entry.classList.remove("hidden");
+                        tag_element.classList.add("selected");
+                    }
+                }
+            }
+        }
+
+        const sorted_tags = [...tags].sort();
+
+        const all_element = document.createElement("a");
+        all_element.href = "#";
+        all_element.innerText = "All";
+        tag_select.appendChild(all_element);
+
+        for (const tag of sorted_tags) {
+            const tag_element = document.createElement("a");
+            tag_element.innerText = tag;
+            tag_element.href = `#${tag.toLowerCase()}`;
+            tag_select.appendChild(tag_element);
+        }
+
+        hashChange();
+        window.addEventListener("hashchange", hashChange);
+    </script>
 </body>
 </html>
